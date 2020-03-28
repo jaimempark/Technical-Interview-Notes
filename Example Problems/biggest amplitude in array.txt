@@ -1,0 +1,25 @@
+given an array T of N integers denoting the tempuratures on all days of the year, return a string with the name of the season with the highest temperature amplitude
+
+    int T[]= {-1,-10,10,5,30,15,20,-10,30,10,29,20}
+
+which stands for winter: -1,-10,10 spring: 5,30,15 summer: 20,-10,30 autumn: 10,29,20
+
+assume T.length is always divisible  by 4
+
+
+Java:
+    public String solution(int[] T) {
+    final int count = T.length / 4;
+    int indx = 0;
+    int last = Integer.MIN_VALUE;
+    for (int i = 0; i < 4; ++i) {
+        int diff = IntStream.of(T).skip(count * i).limit(count).max().getAsInt()
+                 - IntStream.of(T).skip(count * i).limit(count).min().getAsInt();
+        if (diff > last) {
+            indx = i;
+            last = diff;
+        }
+    }
+    final String[] seasons = { "WINTER", "SPRING", "SUMMER", "AUTUMN" };
+    return seasons[indx];
+}

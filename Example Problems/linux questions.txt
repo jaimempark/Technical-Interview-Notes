@@ -1,0 +1,1 @@
+Given a list of hosts.. e.g. host001...host999, check to see if the number of 'nagios' process is running... return healthy if number == 10, unhealthy otherwise.

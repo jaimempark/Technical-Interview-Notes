@@ -1,0 +1,21 @@
+1. Write a function with 2 given arguements(filepath, string_pattern),
+print out all of the lines that contain the 'string_pattern' in the 'filepath'
+
+
+2. Given a URL that returns JSON content in the body when using HTTP GET, how would you retrieve the data and parse it in Python?
+
+
+3. write a function that prints out the number of messages that occurs at every hour, for each application 
+e.g.
+
+01:00 { app1: 12,
+        app2: 123}
+
+02:00 { app1: 21,
+        app2: 60,
+        app3: 100}
+
+03:00: { app1: 21,
+         app2: 2,
+         app3: 10}
+
