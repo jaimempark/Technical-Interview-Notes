@@ -13,4 +13,4 @@ Runtime generally has 3 different cases:
 - Expected Case: The pivot is not expected to be the lowest or the highest number all the time. In every other case, the runtime is O(N log N)
 
 
-nm
+We don't usually care about the best case scenario, only the worst case and expected case.
