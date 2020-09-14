@@ -22,7 +22,7 @@ class Solution {
                 ret -= prev * 2;
             }
             ret += curr;
-            prev = symbol.get(s.charAt(i));
+            prev = curr;
         }
         return ret;
     }
