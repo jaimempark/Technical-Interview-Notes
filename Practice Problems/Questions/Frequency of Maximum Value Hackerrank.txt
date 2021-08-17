@@ -1,0 +1,30 @@
+From HackerRank
+
+brute force is too slow and does not pass all test cases
+
+Collections.frequency and Collections.max are too slow
+
+Can this be done while iterating through the list only once? Yes.
+
+	make a copy q[], make 2 ints for max and frequency, make a dictionary(HashMap<Integer, Integer>)
+
+1. Go through numbers[] in reverse order for(int i = numbers.length()-1; i > -1; i--)
+
+2. if the current value in the for loop is the biggest we've seen so far, set max to that value and frequency to 1
+
+3. if the current value == max, then frequency++
+
+4. at the end of the loop, store the index and frequency into the dictionary <index, frequency>
+
+5. now fill q with the respective values q.set(i, dict.get(q.get(i)))
+
+numbers = [5,3,3,2,4]
+q = [3,4,5,2]
+
+copy of list = [1,2,1,1,1]
+
+answer = [1,1,1,2]
+
+what is q?
+
+hashmap ((4,1),(3,1),(2,1),(1,2),(0,1))
